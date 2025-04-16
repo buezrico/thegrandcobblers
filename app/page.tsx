@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { playfair } from "./layout";
 
 export default function Home() {
@@ -22,6 +21,8 @@ export default function Home() {
           </div>
         </div>
       </header>
+
+      <main></main>
     </div>
   );
 }

@@ -9,9 +9,9 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 w-full z-50 shadow-md shadow-black/75 p-4 bg-white">
       <div className="container mx-auto flex justify-between items-center">
-        <a href="/" className="font-semibold text-lg">
+        <Link href="/" className="font-semibold text-lg">
           THE GRAND COBBLER
-        </a>
+        </Link>
 
         <ul className="space-x-4 hidden md:flex">
           <li>
