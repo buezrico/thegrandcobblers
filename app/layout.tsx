@@ -1,12 +1,8 @@
-import type { Metadata } from "next";
-import { Inter, Playfair_Display } from "next/font/google";
-import "./globals.css";
 import Navbar from "@/components/Navbar";
+import type { Metadata } from "next";
+import { Inter } from "next/font/google";
+import "./globals.css";
 
-export const playfair = Playfair_Display({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-});
 const inter = Inter({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
