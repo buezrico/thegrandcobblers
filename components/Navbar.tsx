@@ -7,9 +7,9 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 shadow-md shadow-black/75 p-4 bg-white">
+    <nav className="fixed top-0 left-0 w-full z-50 shadow-md shadow-black/75 p-4 bg-white/80 backdrop-blur-sm">
       <div className="container mx-auto flex justify-between items-center">
-        <Link href="/" className="font-semibold text-lg">
+        <Link href="/" className="font-semibold text-lg ">
           THE GRAND COBBLER
         </Link>
 
