@@ -1,12 +1,10 @@
-import React from "react";
+import Image from "next/image";
 import art from "../public/images/art.png";
 import bad_shoe from "../public/images/bad-shoe.png";
 import fast_delivery from "../public/images/fast-delivery.png";
 import repair from "../public/images/repair.png";
 import scissors from "../public/images/scissors.png";
 import wipe from "../public/images/wipe.png";
-import wrench from "../public/images/wrench.png";
-import Image from "next/image";
 
 const Services = () => {
   return (

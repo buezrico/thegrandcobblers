@@ -1,9 +1,7 @@
-import React from "react";
-import map from "../public/images/location-pin.png";
-import info from "../public/images/support.png";
-import mail from "../public/images/mail.png";
 import Image from "next/image";
-import Link from "next/link";
+import map from "../public/images/location-pin.png";
+import mail from "../public/images/mail.png";
+import info from "../public/images/support.png";
 
 const Footer = () => {
   return (
