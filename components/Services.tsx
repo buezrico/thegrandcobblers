@@ -19,10 +19,10 @@ const Services = () => {
       </div>
 
       <div className="mt-10 md:mt-16">
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-6 md:gap-12 mt-8">
+        <div className="grid g sm:grid-cols-2 md:grid-cols-3 gap-2 md:gap-12 mt-8">
           {services.map((service, index) => (
             <div
-              className="flex gap-2 flex-col justify-center items-center text-center p-4 border-b border-yellow-500"
+              className="flex gap-2 flex-col justify-center items-center text-center p-4 border-b border-t border-yellow-500"
               key={index}
             >
               <Image
