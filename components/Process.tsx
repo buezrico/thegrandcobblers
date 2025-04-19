@@ -2,7 +2,7 @@ import React from "react";
 
 const Process = () => {
   return (
-    <section className="container mx-auto px-4 mt-20 lg:mt-32">
+    <section className="container mx-auto px-4 my-20 lg:my-32">
       <div className="">
         <h3 className="text-3xl md:text-5xl font-semibold">
           HOW WE <span className="bg-yellow-500/80 px-2">WORK</span>
