@@ -12,8 +12,8 @@ export default function Home() {
       <main className="">
         <AboutUs />
         <Services />
-        <Process />
         <Quality />
+        <Process />
       </main>
     </div>
   );
