@@ -9,7 +9,11 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 w-full z-50 shadow-md shadow-black/75 p-4 bg-white/80 backdrop-blur-sm">
       <div className="container mx-auto flex justify-between items-center">
-        <Link href="/" className="font-semibold text-lg hover:opacity-70">
+        <Link
+          href="/"
+          className="font-semibold text-lg hover:opacity-70"
+          onClick={() => setIsOpen(false)}
+        >
           THE <span className="text-yellow-600">GRAND</span> COBBLER
         </Link>
 
@@ -67,13 +71,19 @@ const Navbar = () => {
             className={`space-y-4  md:text-lg flex flex-col md:hidden absolute top-20 right-0 bg-white shadow-lg shadow-black/75 p-4 rounded-l-lg`}
           >
             <li>
-              <Link href="/about-us">About Us</Link>
+              <Link href="/about-us" onClick={() => setIsOpen(false)}>
+                About Us
+              </Link>
             </li>
             <li>
-              <Link href="/services">Services</Link>
+              <Link href="/services" onClick={() => setIsOpen(false)}>
+                Services
+              </Link>
             </li>
             <li>
-              <Link href="/contact-us">Contact Us</Link>
+              <Link href="/contact-us" onClick={() => setIsOpen(false)}>
+                Contact Us
+              </Link>
             </li>
           </ul>
         )}

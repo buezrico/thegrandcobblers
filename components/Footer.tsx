@@ -7,7 +7,7 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <footer className="shadow-md shadow-black/75 p-4 bg-black backdrop-blur-sm mt-20 py-8 text-white">
+    <footer className="shadow-md shadow-black/75 p-4 bg-black backdrop-blur-sm py-8 text-white">
       <div className="container mx-auto w-full grid md:grid-cols-3 gap-8 md:gap-16">
         <div className="flex flex-col gap-2 items-center text-center">
           <Image src={map} alt="location pin" height={48} width={48} />
