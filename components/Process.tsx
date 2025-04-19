@@ -1,6 +1,6 @@
 import React from "react";
 
-const HowWeWork = () => {
+const Process = () => {
   return (
     <section className="container mx-auto px-4 mt-20 lg:mt-32">
       <div className="">
@@ -8,8 +8,7 @@ const HowWeWork = () => {
           HOW WE <span className="bg-yellow-500/80 px-2">WORK</span>
         </h3>
         <p className="mt-4 text-lg md:text-xl">
-          Seemless service delivery with little or no room for business-customer
-          conflict.
+          A SEEMLESS PROCESS, BUILT AROUND YOU.
         </p>
       </div>
 
@@ -72,4 +71,4 @@ const HowWeWork = () => {
   );
 };
 
-export default HowWeWork;
+export default Process;

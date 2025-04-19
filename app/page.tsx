@@ -1,7 +1,8 @@
 import AboutUs from "@/components/AboutUs";
 import Hero from "@/components/Hero";
-import HowWeWork from "@/components/HowWeWork";
+import Process from "@/components/Process";
 import Quality from "@/components/Quality";
+import Services from "@/components/Services";
 
 export default function Home() {
   return (
@@ -10,9 +11,8 @@ export default function Home() {
 
       <main className="">
         <AboutUs />
-
-        <HowWeWork />
-
+        <Services />
+        <Process />
         <Quality />
       </main>
     </div>
