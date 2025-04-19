@@ -15,31 +15,29 @@ export default function Page() {
           </h3>
         </div>
 
-        <form className="mt-10 md:mt-16 flex flex-col justify-center lg:flex-row items-center gap-8">
-          <div className="flex flex-col gap-8">
-            <div className="flex gap-4 justify-between">
-              <input
-                type="text"
-                placeholder="Your Name"
-                className="bg-gray-200 text-sm p-4"
-              />
-              <input
-                type="text"
-                placeholder="Your Email"
-                className="bg-gray-200 text-sm p-4"
-              />
-            </div>
+        <div className="flex items-center justify-center w-full ">
+          <form className="mt-10 md:mt-16 flex flex-col justify-center items-center gap-8 w-full md:w-4/6 lg:w-2/5">
+            <input
+              type="text"
+              placeholder="Your Name"
+              className="bg-gray-200 text-sm p-4 w-full"
+            />
+            <input
+              type="text"
+              placeholder="Your Email"
+              className="bg-gray-200 text-sm p-4 w-full"
+            />
             <textarea
               placeholder="Your Message"
               className="bg-gray-200 text-sm p-4 w-full"
               rows={4}
             />
 
-            <button className="bg-yellow-500 text-white px-8 py-4 font-medium hover:bg-transparent border-2 border-yellow-500 hover:text-yellow-500">
+            <button className="bg-yellow-500 text-white px-8 py-4 font-medium hover:bg-transparent border-2 border-yellow-500 hover:text-yellow-500 w-full">
               BOOK APPOINTMENT
             </button>
-          </div>
-        </form>
+          </form>
+        </div>
       </section>
 
       <div className="w-full h-[350px] mt-20">
