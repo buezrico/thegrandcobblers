@@ -2,7 +2,7 @@ import React from "react";
 
 const Hero = () => {
   return (
-    <header className="relative bg-[url('/images/shoe.jpg')] bg-cover bg-center h-screen flex items-center justify-center">
+    <header className="relative bg-[url('/images/office.jpg')] bg-cover bg-center h-screen flex items-center justify-center">
       <div className="absolute top-0 left-0 h-full w-full bg-black/40">
         <div className="container mx-auto text-center flex flex-col items-center justify-center h-full px-8">
           <h1

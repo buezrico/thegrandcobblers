@@ -2,6 +2,9 @@ import Image from "next/image";
 import map from "../public/images/location-pin.png";
 import mail from "../public/images/mail.png";
 import info from "../public/images/support.png";
+import facebook from "../public/images/facebook.png";
+import instagram from "../public/images/instagram.png";
+import Link from "next/link";
 
 const Footer = () => {
   return (
@@ -13,7 +16,11 @@ const Footer = () => {
           <div className="mt-2">
             <h4 className="font-medium text-yellow-500">LOCATION</h4>
             <p className="text-sm text-center">
-              Posh Plaza 31 Admiralty Way Lekki, Lagos, Nigeria.
+              • Lekki - Posh Plaza 31 Admiralty Way Lekki, Lagos, Nigeria.
+            </p>
+            <p className="text-sm text-center">
+              • Osapa - Rindex Plaza opposite Victory Park Estate Osapa London,
+              Lekki, Lagos, Nigeria.
             </p>
           </div>
         </div>
@@ -28,6 +35,21 @@ const Footer = () => {
             <p className="text-sm text-center">
               We Specialize in Shoes, Bags & Leather Goods Repair.
             </p>
+
+            <div className="flex flex-col items-center gap-2 mt-4">
+              <Link href={""} className="flex items-center gap-2 mt-2">
+                <Image src={facebook} alt="facebook" height={24} width={24} />
+                <p>The Grand Cobbler</p>
+              </Link>
+              <Link href={""} className="flex items-center gap-2 mt-2">
+                <Image src={instagram} alt="instagram" height={24} width={24} />
+                <p>@grandcobbler</p>
+              </Link>{" "}
+              <Link href={""} className="flex items-center gap-2 mt-2">
+                <Image src={instagram} alt="instagram" height={24} width={24} />
+                <p>@grandcobbler_osapa</p>
+              </Link>
+            </div>
           </div>
         </div>
 

@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import cobbler from "../public/images/cobbler.jpg";
+import cobbler from "../public/images/repair1.jpg";
 
 const AboutUs = () => {
   return (
