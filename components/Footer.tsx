@@ -16,11 +16,10 @@ const Footer = () => {
           <div className="mt-2">
             <h4 className="font-medium text-yellow-500">LOCATION</h4>
             <p className="text-sm text-center">
-              • Lekki - Posh Plaza 31 Admiralty Way Lekki, Lagos, Nigeria.
+              Head Office: Posh Plaza Admiralty Way Lekki Phase 1
             </p>
-            <p className="text-sm text-center">
-              • Osapa - Rindex Plaza opposite Victory Park Estate Osapa London,
-              Lekki, Lagos, Nigeria.
+            <p className="text-sm text-center mt-2">
+              Rindex Plaza opposite Victory Park Estate  Osapa London
             </p>
           </div>
         </div>
@@ -29,9 +28,7 @@ const Footer = () => {
           <Image src={info} alt="about" height={48} width={48} />
 
           <div className="mt-2">
-            <h4 className="font-medium text-white ">
-              THE <span className="text-yellow-500">GRAND</span> COBBLER
-            </h4>
+            <h4 className="font-medium text-yellow-500">THE GRAND COBBLER</h4>
             <p className="text-sm text-center">
               We Specialize in Shoes, Bags & Leather Goods Repair.
             </p>

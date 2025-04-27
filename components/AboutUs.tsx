@@ -16,23 +16,36 @@ const AboutUs = () => {
         <div className="w-full lg:w-[50%] text-justify flex flex-col gap-4">
           {/* <h3 className="text-xl font-medium">✨ The Art of Restoration</h3> */}
           <p className="text-base">
-            At The Grand Cobbler, we believe that luxury doesn&apos;t end at
-            purchase — it continues through care. Specializing in the meticulous
-            aftercare of shoes, bags, and leather goods, we offer premium
-            restoration services that breathe new life into treasured items.
+            THE GRAND COBBLER is Lagos&apos;s finest and most reliable shoes and
+            leather goods repair company. An on-demand service providing modern
+            aftercare.
           </p>
           <p className="text-base">
-            Whether it&apos;s precision color matching, detailed damage repair,
-            or a quick fix, every piece is handled with craftsmanship and care.
-            Our contactless collection service ensures a seamless experience
-            from pick-up to delivery — preserving the elegance of your favorite
-            items without compromise.
+            We specialise in shoes, bags and luggage repairs, leather goods
+            restoration, and customised footwear.
+          </p>
+          <p className="text-base">
+            Our mission is to have you fall in love with your favourite pieces
+            all over again.
           </p>
 
           <p className="text-base">
-            Trusted by clients across social platforms and backed by real-world
-            testimonials, The Grand Cobbler is where timeless pieces are revived
-            with precision and pride.
+            We aim to provide an intuitive service that seamlessly fits with
+            your busy lifestyle.
+          </p>
+
+          <p className="text-base">
+            The Grand Cobbler has been in existence for the past 10 years.
+          </p>
+
+          <p className="text-base">
+            We have a range of services including cleaning, repair, restoration
+            addition aftercare for watch and glasses.
+          </p>
+          <p className="text-base">
+            Our head office is located at Posh Plaza Admiralty Way, Lekki with a
+            outlet in Osapa London at Rindex Plaza (adjacent to Victory Park
+            Estate main gate).
           </p>
         </div>
 
