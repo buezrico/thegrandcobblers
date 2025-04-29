@@ -8,9 +8,10 @@ const Quality = () => {
           <h1 className="font-extrabold text-3xl md:text-5xl">
             100% QUALITY GUARANTEE
           </h1>
-          <h1 className="font-bold text-3xl md:text-5xl text-white">
-            CALL: 08092345000
-          </h1>
+          <div className="font-bold text-3xl md:text-5xl text-white">
+            CALL: <p>Lekki - 08092345000</p>
+            <p>Osapa - 08170335544</p>
+          </div>
           <p className="text-lg md:text-xl mb-6 font-semibold text-justify text-white">
             We provide immediate repair services that make you look and feel
             your best!
