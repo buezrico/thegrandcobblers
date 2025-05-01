@@ -1,10 +1,10 @@
 import Image from "next/image";
-import art from "../public/images/art.png";
-import bad_shoe from "../public/images/bad-shoe.png";
-import fast_delivery from "../public/images/fast-delivery.png";
-import repair from "../public/images/repair.png";
-import scissors from "../public/images/scissors.png";
-import wipe from "../public/images/wipe.png";
+import art from "../public/images/3.jpg";
+import bad_shoe from "../public/images/2.jpg";
+import fast_delivery from "../public/images/1.jpg";
+import repair from "../public/images/6.jpg";
+import scissors from "../public/images/4.jpg";
+import wipe from "../public/images/5.jpg";
 
 const Services = () => {
   return (
@@ -23,14 +23,14 @@ const Services = () => {
               className="flex gap-2 flex-col justify-center items-center text-center p-4 border-b border-t border-yellow-500"
               key={index}
             >
+              <h3 className="font-medium text-lg md:text-xl text-yellow-500">
+                {service.service}
+              </h3>
               <Image
                 src={service.icon}
                 alt={service.service}
-                className="h-16 w-16"
+                className="size-20 border border-yellow-5 shadow-lg rounded-full"
               />
-              <h3 className="font-medium text-lg md:text-xl mt-4 text-yellow-500">
-                {service.service}
-              </h3>
               <p className="text-sm md:text-base">{service.description}</p>
             </div>
           ))}
