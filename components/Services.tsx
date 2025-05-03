@@ -1,9 +1,9 @@
 import Image from "next/image";
-import art from "../public/images/3.jpg";
+import art from "../public/images/8.jpg";
 import bad_shoe from "../public/images/2.jpg";
 import fast_delivery from "../public/images/1.jpg";
 import repair from "../public/images/6.jpg";
-import scissors from "../public/images/4.jpg";
+import scissors from "../public/images/7.jpg";
 import wipe from "../public/images/5.jpg";
 
 const Services = () => {
