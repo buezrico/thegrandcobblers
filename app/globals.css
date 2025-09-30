@@ -1,5 +1,455 @@
 @import "tailwindcss";
 
+/* Custom CSS Variables for Luxury Brand Colors */
+:root {
+  --primary-gold: #D4AF37;
+  --secondary-gold: #FFD700;
+  --accent-gold: #FFC107;
+  --dark-charcoal: #2C2C2C;
+  --light-charcoal: #404040;
+  --cream: #F8F6F0;
+  --deep-black: #1A1A1A;
+  --luxury-gradient: linear-gradient(135deg, #D4AF37 0%, #FFD700 50%, #FFC107 100%);
+}
+
+/* Smooth scrolling and base animations */
+* {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* Button enhancements */
 button {
   cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Luxury gradient text effect */
+.gradient-text {
+  background: var(--luxury-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Radial gradient utility */
+.bg-gradient-radial {
+  background: radial-gradient(circle, var(--tw-gradient-stops));
+}
+
+/* Custom animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes subtle-move {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(-10px) rotate(5deg);
+    opacity: 0.9;
+  }
+}
+
+@keyframes spinSlow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Animation classes */
+.animate-fade-in-up {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.animate-fade-in-down {
+  animation: fadeInDown 0.8s ease-out forwards;
+}
+
+.animate-slide-in-left {
+  animation: slideInLeft 0.8s ease-out forwards;
+}
+
+.animate-slide-in-right {
+  animation: slideInRight 0.8s ease-out forwards;
+}
+
+.animate-scale-in {
+  animation: scaleIn 0.6s ease-out forwards;
+}
+
+.animate-shimmer {
+  animation: shimmer 2s infinite;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(212, 175, 55, 0.4),
+    transparent
+  );
+  background-size: 200% 100%;
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-spin-slow {
+  animation: spinSlow 8s linear infinite;
+}
+
+/* Luxury card effects */
+.luxury-card {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.luxury-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(212, 175, 55, 0.15);
+  border-color: rgba(212, 175, 55, 0.4);
+}
+
+/* Luxury button styles */
+.btn-luxury {
+  background: var(--luxury-gradient);
+  color: white;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-luxury::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: left 0.6s;
+}
+
+.btn-luxury:hover::before {
+  left: 100%;
+}
+
+.btn-luxury:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(212, 175, 55, 0.4);
+}
+
+.btn-luxury-outline {
+  background: transparent;
+  color: #D4AF37;
+  border: 2px solid #D4AF37;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+.btn-luxury-outline:hover {
+  background: var(--luxury-gradient);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(212, 175, 55, 0.4);
+}
+
+/* Section spacing */
+.section-padding {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+@media (min-width: 768px) {
+  .section-padding {
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+  }
+}
+
+/* Parallax effect */
+.parallax {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Glassmorphism effect */
+.glass {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Luxury text shadows */
+.luxury-text-shadow {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Enhanced Typography Styles for Hero */
+@keyframes wordRotate {
+  0% {
+    opacity: 0;
+    transform: translateY(30px) scale(0.8);
+  }
+  20% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  80% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-30px) scale(0.8);
+  }
+}
+
+.animate-word-rotate {
+  animation: wordRotate 2s ease-in-out;
+}
+
+/* Advanced text gradient with shimmer effect */
+.gradient-text-enhanced {
+  background: linear-gradient(
+    135deg,
+    #D4AF37 0%,
+    #FFD700 25%,
+    #FFC107 50%,
+    #FFD700 75%,
+    #D4AF37 100%
+  );
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientShift 3s ease-in-out infinite;
+}
+
+@keyframes gradientShift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+/* Professional typography scale */
+.text-display-large {
+  font-size: clamp(2.5rem, 8vw, 5rem);
+  line-height: 0.9;
+  letter-spacing: -0.02em;
+  font-weight: 900;
+}
+
+.text-display-medium {
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  font-weight: 700;
+}
+
+/* Enhanced shadow effects */
+.text-shadow-luxury {
+  text-shadow:
+    0 2px 4px rgba(212, 175, 55, 0.2),
+    0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Premium button hover effects */
+.btn-premium-glow:hover {
+  box-shadow:
+    0 0 20px rgba(212, 175, 55, 0.3),
+    0 0 40px rgba(212, 175, 55, 0.2),
+    0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+/* Floating animation for text elements */
+@keyframes textFloat {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+.animate-text-float {
+  animation: textFloat 4s ease-in-out infinite;
+}
+
+/* Professional spacing utilities */
+.tracking-luxury {
+  letter-spacing: 0.15em;
+}
+
+.leading-luxury {
+  line-height: 1.4;
+}
+
+/* Enhanced Navbar Animations */
+@keyframes navSlideDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes brandPulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+@keyframes mobileMenuSlide {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Navigation specific animations */
+.animate-nav-slide {
+  animation: navSlideDown 0.8s ease-out;
+}
+
+.animate-brand-pulse {
+  animation: brandPulse 2s ease-in-out infinite;
+}
+
+.animate-mobile-menu {
+  animation: mobileMenuSlide 0.3s ease-out;
+}
+
+/* Enhanced navbar scroll effects */
+.navbar-blur {
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+/* Professional link hover effects */
+.nav-link-hover {
+  position: relative;
+  overflow: hidden;
+}
+
+.nav-link-hover::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.1), transparent);
+  transition: left 0.5s;
+}
+
+.nav-link-hover:hover::before {
+  left: 100%;
+}
+
+/* Mobile menu enhanced styling */
+.mobile-menu-backdrop {
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  background: linear-gradient(135deg,
+    rgba(255, 255, 255, 0.95) 0%,
+    rgba(248, 246, 240, 0.95) 100%);
 }

@@ -126,6 +126,32 @@ const Hero = () => {
               </div>
             </div>
 
+            {/* Enhanced Value Proposition */}
+            <div
+              className={`space-y-4 ${
+                isLoaded ? "animate-fade-in-up" : "opacity-0 translate-y-6"
+              } transition-all duration-1200 ease-out`}
+              style={{ animationDelay: "1.0s" }}
+            >
+              <div className="grid grid-cols-2 gap-6 max-w-lg">
+                <div className="text-center">
+                  <div className="text-sm font-semibold text-[#D4AF37] tracking-wide uppercase">Shoes</div>
+                  <div className="text-xs text-[#6B6B6B] font-medium">Expert Restoration</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-sm font-semibold text-[#D4AF37] tracking-wide uppercase">Bags</div>
+                  <div className="text-xs text-[#6B6B6B] font-medium">Luxury Repair</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-sm font-semibold text-[#D4AF37] tracking-wide uppercase">Leather</div>
+                  <div className="text-xs text-[#6B6B6B] font-medium">Premium Care</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-sm font-semibold text-[#D4AF37] tracking-wide uppercase">Belts</div>
+                  <div className="text-xs text-[#6B6B6B] font-medium">Professional Fix</div>
+                </div>
+              </div>
+            </div>
 
             {/* Enhanced Action Buttons */}
             <div
@@ -226,7 +252,7 @@ const Hero = () => {
                 </div>
 
                 {/* Enhanced quality badge */}
-                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-[#D4AF37] via-[#FFD700] to-[#FFC107] text-white px-5 py-3 rounded-2xl text-sm font-black shadow-xl group-hover:shadow-2xl group-hover:scale-110 transition-all duration-300 border border-white/20">
+                <div className="absolute top-6 right-6 bg-gradient-to-r from-[#D4AF37] via-[#FFD700] to-[#FFC107] text-white px-5 py-3 rounded-2xl text-sm font-black shadow-xl group-hover:shadow-2xl group-hover:scale-110 transition-all duration-300 border border-white/20">
                   🏆 15+ Years Excellence
                 </div>
 
@@ -304,78 +330,9 @@ const Hero = () => {
               </div>
             </div>
 
-            {/* Additional leather goods showcase */}
-            <div
-              className={`absolute bottom-8 right-20 group ${
-                isLoaded ? "animate-fade-in-up" : "opacity-0 translate-y-8"
-              } transition-all duration-1200 ease-out`}
-              style={{ animationDelay: "2.2s" }}
-            >
-              <div className="relative w-18 h-18">
-                {/* Glow effect */}
-                <div className="absolute -inset-1 bg-gradient-to-br from-[#FFD700]/30 to-[#D4AF37]/30 rounded-full blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-400"></div>
-
-                <div className="relative w-full h-full rounded-full overflow-hidden shadow-lg border-2 border-white/40 group-hover:border-[#D4AF37]/60 transition-all duration-300 group-hover:shadow-xl">
-                  <Image
-                    src="/images/5.jpg"
-                    alt="Professional leather care"
-                    fill
-                    className="object-cover group-hover:scale-110 transition-transform duration-500"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-50 group-hover:opacity-30 transition-opacity duration-300"></div>
-                </div>
-              </div>
-            </div>
-
-            {/* Belt restoration showcase */}
-            <div
-              className={`absolute bottom-4 right-32 group ${
-                isLoaded ? "animate-fade-in-up" : "opacity-0 translate-y-8"
-              } transition-all duration-1200 ease-out`}
-              style={{ animationDelay: "2.4s" }}
-            >
-              <div className="relative w-16 h-16">
-                {/* Glow effect */}
-                <div className="absolute -inset-1 bg-gradient-to-br from-[#FFC107]/30 to-[#FFD700]/30 rounded-xl blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-400"></div>
-
-                <div className="relative w-full h-full rounded-xl overflow-hidden shadow-lg border-2 border-white/40 group-hover:border-[#D4AF37]/60 transition-all duration-300 group-hover:shadow-xl">
-                  <Image
-                    src="/images/7.jpg"
-                    alt="Expert belt restoration"
-                    fill
-                    className="object-cover group-hover:scale-110 transition-transform duration-500"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-50 group-hover:opacity-30 transition-opacity duration-300"></div>
-                </div>
-              </div>
-            </div>
-
-            {/* Luxury accessory repair */}
-            <div
-              className={`absolute bottom-12 left-20 group ${
-                isLoaded ? "animate-fade-in-up" : "opacity-0 translate-y-8"
-              } transition-all duration-1200 ease-out`}
-              style={{ animationDelay: "2.6s" }}
-            >
-              <div className="relative w-14 h-14">
-                {/* Glow effect */}
-                <div className="absolute -inset-1 bg-gradient-to-br from-[#D4AF37]/30 to-[#FFC107]/30 rounded-full blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-400"></div>
-
-                <div className="relative w-full h-full rounded-full overflow-hidden shadow-lg border-2 border-white/40 group-hover:border-[#D4AF37]/60 transition-all duration-300 group-hover:shadow-xl">
-                  <Image
-                    src="/images/8.jpg"
-                    alt="Luxury accessory repair"
-                    fill
-                    className="object-cover group-hover:scale-110 transition-transform duration-500"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-50 group-hover:opacity-30 transition-opacity duration-300"></div>
-                </div>
-              </div>
-            </div>
-
             {/* Enhanced service highlight badge */}
             <div
-              className={`absolute top-20 right-8 group ${
+              className={`absolute top-12 right-12 group ${
                 isLoaded ? "animate-scale-in" : "opacity-0 scale-75"
               } transition-all duration-1200 ease-out`}
               style={{ animationDelay: "1.8s" }}
@@ -474,6 +431,42 @@ const Hero = () => {
         </div>
       </div>
 
+      {/* Enhanced Scroll Indicator */}
+      <div
+        className={`absolute bottom-8 left-1/2 transform -translate-x-1/2 ${
+          isLoaded ? "animate-bounce" : "opacity-0 translate-y-4"
+        } transition-all duration-1200 ease-out`}
+        style={{
+          animationDelay: "2.2s",
+          animationDuration: "2s",
+          animationIterationCount: "infinite"
+        }}
+      >
+        <div
+          className="group cursor-pointer flex flex-col items-center"
+          onClick={() => window.scrollTo({ top: window.innerHeight, behavior: 'smooth' })}
+        >
+          {/* Mouse-style scroll indicator */}
+          <div className="relative w-7 h-12 border-2 border-[#D4AF37]/50 rounded-full flex items-start justify-center pt-2 group-hover:border-[#D4AF37] transition-all duration-300 group-hover:scale-110">
+            <div className="w-1 h-3 bg-[#D4AF37]/70 rounded-full animate-pulse group-hover:bg-[#D4AF37] transition-colors duration-300"></div>
+
+            {/* Subtle glow effect on hover */}
+            <div className="absolute inset-0 rounded-full bg-[#D4AF37]/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+          </div>
+
+          {/* Text label */}
+          <p className="text-[#6B6B6B] text-xs mt-3 tracking-[0.2em] font-bold group-hover:text-[#D4AF37] transition-colors duration-300 uppercase">
+            🔽 Discover More
+          </p>
+
+          {/* Animated chevron */}
+          <div className="mt-1 opacity-60 group-hover:opacity-100 transition-all duration-300 group-hover:translate-y-0.5">
+            <svg className="w-4 h-4 text-[#D4AF37]/60 group-hover:text-[#D4AF37] transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+            </svg>
+          </div>
+        </div>
+      </div>
     </section>
   );
 };

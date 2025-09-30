@@ -11,7 +11,7 @@ function SubmitButton() {
     <button
       type="submit"
       disabled={pending}
-      className="bg-yellow-500 text-white px-8 py-4 font-medium hover:bg-transparent border-2 border-yellow-500 hover:text-yellow-500 w-full disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+      className="btn-luxury px-8 py-4 rounded-xl w-full disabled:opacity-50 disabled:cursor-not-allowed"
     >
       {pending ? 'SENDING...' : 'SEND MESSAGE'}
     </button>
@@ -30,25 +30,81 @@ export default function Page() {
 
   return (
     <main className="">
-      <header className="relative bg-[url('/images/repair1.jpg')] bg-cover bg-center h-full pt-64 pb-20 ">
-        <div className="absolute top-0 left-0 w-full h-full flex flex-col align-center justify-center bg-black/70 text-center text-white">
-          <h1 className="text-3xl font-medium">Contact Us</h1>
-        </div>
-      </header>
+      <section className="relative min-h-[70vh] bg-gradient-to-br from-[#F8F6F0] via-white to-[#F8F6F0] flex items-center justify-center pt-24 pb-16 overflow-hidden">
+        {/* Background Decorative Elements */}
+        <div className="absolute top-10 right-10 w-80 h-80 bg-gradient-to-br from-[#D4AF37]/12 to-transparent rounded-full blur-3xl animate-float"></div>
+        <div className="absolute bottom-10 left-10 w-72 h-72 bg-gradient-to-tr from-[#FFD700]/15 to-transparent rounded-full blur-3xl animate-float" style={{ animationDelay: '2.5s' }}></div>
+        <div className="absolute top-1/3 left-1/3 w-96 h-96 bg-gradient-to-br from-[#FFC107]/8 to-transparent rounded-full blur-3xl animate-float" style={{ animationDelay: '1.5s' }}></div>
 
-      <section className="container mx-auto px-4 pt-20">
-        <div className="text-center">
-          <p className="text-lg md:text-xl">SEND A MESSAGE</p>
-          <h3 className="mt-4 text-3xl md:text-5xl font-semibold">
-            GET IN <span className="bg-yellow-500/80 px-2">TOUCH</span> WITH US
+        <div className="container mx-auto px-4 text-center relative z-10">
+          <div className="max-w-4xl mx-auto">
+            {/* Premium Badge */}
+            <div className="inline-flex items-center gap-2 bg-[#D4AF37]/10 border border-[#D4AF37]/20 rounded-full px-6 py-3 mb-8 animate-fade-in-down">
+              <div className="w-2 h-2 bg-[#D4AF37] rounded-full animate-pulse"></div>
+              <span className="text-[#D4AF37] font-medium tracking-wider uppercase text-sm">Get In Touch</span>
+            </div>
+
+            {/* Main Heading */}
+            <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-[#2C2C2C] mb-6 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+              CONTACT{" "}
+              <span className="bg-gradient-to-r from-[#D4AF37] via-[#FFD700] to-[#FFC107] text-transparent bg-clip-text">
+                THE GRAND
+              </span>{" "}
+              COBBLER
+            </h1>
+
+            {/* Subtitle */}
+            <p className="text-xl md:text-2xl text-gray-600 mb-12 max-w-3xl mx-auto leading-relaxed animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
+              Ready to restore your treasured items? Let&apos;s discuss how we can bring them back to life
+            </p>
+
+            {/* Contact Methods Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto animate-fade-in-up" style={{ animationDelay: '0.6s' }}>
+              <div className="luxury-card bg-white/80 backdrop-blur-sm p-6 rounded-2xl text-center border border-[#D4AF37]/20 hover:border-[#D4AF37]/40 transition-all duration-300">
+                <div className="text-3xl mb-3">📱</div>
+                <div className="font-semibold text-[#2C2C2C] mb-2">WhatsApp</div>
+                <div className="text-sm text-gray-600">Quick Quote & Consultation</div>
+              </div>
+              <div className="luxury-card bg-white/80 backdrop-blur-sm p-6 rounded-2xl text-center border border-[#D4AF37]/20 hover:border-[#D4AF37]/40 transition-all duration-300">
+                <div className="text-3xl mb-3">📍</div>
+                <div className="font-semibold text-[#2C2C2C] mb-2">Visit Us</div>
+                <div className="text-sm text-gray-600">Lekki & Osapa Locations</div>
+              </div>
+              <div className="luxury-card bg-white/80 backdrop-blur-sm p-6 rounded-2xl text-center border border-[#D4AF37]/20 hover:border-[#D4AF37]/40 transition-all duration-300">
+                <div className="text-3xl mb-3">📧</div>
+                <div className="font-semibold text-[#2C2C2C] mb-2">Email Us</div>
+                <div className="text-sm text-gray-600">Detailed Inquiries</div>
+              </div>
+            </div>
+
+            {/* Quick Actions */}
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mt-12 animate-fade-in-up" style={{ animationDelay: '0.8s' }}>
+              <button className="btn-luxury px-8 py-4 rounded-full text-sm">
+                SEND MESSAGE BELOW
+              </button>
+              <button className="btn-luxury-outline px-8 py-4 rounded-full text-sm">
+                CALL NOW: 08092345000
+              </button>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <section className="container mx-auto px-4 section-padding">
+        <div className="text-center mb-16">
+          <p className="text-lg md:text-xl text-[#D4AF37] font-medium tracking-wider uppercase mb-4">SEND A MESSAGE</p>
+          <h3 className="text-4xl md:text-6xl font-bold text-[#2C2C2C] mb-6">
+            GET IN <span className="bg-gradient-to-r from-[#D4AF37] via-[#FFD700] to-[#FFC107] text-transparent bg-clip-text">TOUCH</span> WITH US
           </h3>
+          <div className="w-24 h-1 bg-gradient-to-r from-[#D4AF37] to-[#FFD700] mx-auto rounded-full"></div>
         </div>
 
-        <div className="flex items-center justify-center w-full ">
+        <div className="flex items-center justify-center w-full">
           <form
             ref={formRef}
             action={formAction}
-            className="mt-10 md:mt-16 flex flex-col justify-center items-center gap-8 w-full md:w-4/6 lg:w-2/5"
+            className="luxury-card bg-white p-8 md:p-12 rounded-3xl flex flex-col justify-center items-center gap-8 w-full md:w-4/6 lg:w-2/5 shadow-2xl border border-[#D4AF37]/20"
           >
             {/* Honeypot field for spam protection */}
             <input
@@ -64,7 +120,7 @@ export default function Page() {
                 type="text"
                 name="name"
                 placeholder="Your Name"
-                className="bg-gray-200 text-sm p-4 w-full"
+                className="bg-[#F8F6F0] border border-[#D4AF37]/20 focus:border-[#D4AF37] text-[#2C2C2C] p-4 w-full rounded-xl transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[#D4AF37]/20"
                 required
               />
               {state.errors?.name && (
@@ -77,7 +133,7 @@ export default function Page() {
                 type="email"
                 name="email"
                 placeholder="Your Email"
-                className="bg-gray-200 text-sm p-4 w-full"
+                className="bg-[#F8F6F0] border border-[#D4AF37]/20 focus:border-[#D4AF37] text-[#2C2C2C] p-4 w-full rounded-xl transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[#D4AF37]/20"
                 required
               />
               {state.errors?.email && (
@@ -89,7 +145,7 @@ export default function Page() {
               <textarea
                 name="message"
                 placeholder="Your Message"
-                className="bg-gray-200 text-sm p-4 w-full"
+                className="bg-[#F8F6F0] border border-[#D4AF37]/20 focus:border-[#D4AF37] text-[#2C2C2C] p-4 w-full rounded-xl transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[#D4AF37]/20 resize-none"
                 rows={4}
                 required
               />

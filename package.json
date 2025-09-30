@@ -6,7 +6,10 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "biome:check": "biome check .",
+    "biome:fix": "biome check --fix .",
+    "biome:format": "biome format --write ."
   },
   "dependencies": {
     "@types/nodemailer": "^7.0.2",
@@ -19,6 +22,7 @@
     "zod": "^4.1.11"
   },
   "devDependencies": {
+    "@biomejs/biome": "^2.2.4",
     "@eslint/eslintrc": "^3",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
