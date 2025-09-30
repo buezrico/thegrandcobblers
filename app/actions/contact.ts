@@ -199,7 +199,7 @@ export async function submitContactForm(
     return {
       success: true,
     };
-  } catch (error: any) {
+  } catch (error: unknown) {
     console.error("Contact form error:", error);
 
     // Always return a generic user-friendly message

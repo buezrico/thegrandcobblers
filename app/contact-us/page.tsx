@@ -106,7 +106,7 @@ export default function Page() {
 
             {state.success && (
               <div className="w-full bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded">
-                Thank you! Your message has been sent successfully. We'll get back to you within 24 hours.
+                Thank you! Your message has been sent successfully. We&apos;ll get back to you within 24 hours.
               </div>
             )}
 
