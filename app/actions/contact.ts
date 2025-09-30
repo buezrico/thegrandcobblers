@@ -41,16 +41,18 @@ function validateEnvironment() {
 
   const result = envSchema.safeParse(env);
   if (!result.success) {
-    const errors = result.error.issues.map(issue => `${issue.path.join('.')}: ${issue.message}`).join(', ');
+    const errors = result.error.issues
+      .map((issue) => `${issue.path.join(".")}: ${issue.message}`)
+      .join(", ");
     throw new Error(`Environment configuration error: ${errors}`);
   }
   return result.data;
 }
 
-async function createTransporter(retryAttempt = 0): Promise<nodemailer.Transporter> {
+async function createTransporter(): Promise<nodemailer.Transporter> {
   const env = validateEnvironment();
 
-  const transporter = nodemailer.createTransport({
+  return nodemailer.createTransport({
     host: env.SMTP_HOST,
     port: parseInt(env.SMTP_PORT),
     secure: true,
@@ -62,22 +64,6 @@ async function createTransporter(retryAttempt = 0): Promise<nodemailer.Transport
       rejectUnauthorized: false,
     },
   });
-
-  try {
-    await transporter.verify();
-    console.log('SMTP connection verified successfully');
-    return transporter;
-  } catch (error) {
-    console.error(`SMTP verification failed (attempt ${retryAttempt + 1}):`, error);
-
-    if (retryAttempt < 2) {
-      console.log(`Retrying SMTP connection in ${(retryAttempt + 1) * 1000}ms...`);
-      await new Promise(resolve => setTimeout(resolve, (retryAttempt + 1) * 1000));
-      return createTransporter(retryAttempt + 1);
-    }
-
-    throw new Error('SMTP configuration failed after 3 attempts. Please check your email settings.');
-  }
 }
 
 export async function submitContactForm(
@@ -89,12 +75,14 @@ export async function submitContactForm(
     const env = validateEnvironment();
 
     // Parse and validate form data
-    const validatedFields = contactSchema.safeParse({
+    const formDataObj = {
       name: formData.get("name"),
       email: formData.get("email"),
       message: formData.get("message"),
       honeypot: formData.get("honeypot"),
-    });
+    };
+
+    const validatedFields = contactSchema.safeParse(formDataObj);
 
     // Return validation errors
     if (!validatedFields.success) {
@@ -112,7 +100,7 @@ export async function submitContactForm(
       };
     }
 
-    // Create and verify transporter with retry logic
+    // Create transporter
     const transporter = await createTransporter();
 
     // Email to business
@@ -166,22 +154,16 @@ export async function submitContactForm(
       </div>
     `;
 
-    // Send email to business with retry logic
-    try {
-      await transporter.sendMail({
-        from: env.SMTP_FROM,
-        to: env.BUSINESS_EMAIL,
-        subject: `New Contact Form Submission from ${name}`,
-        html: businessEmailTemplate,
-        replyTo: email,
-      });
-      console.log('Business notification email sent successfully');
-    } catch (error) {
-      console.error('Failed to send business notification:', error);
-      throw new Error('Failed to send business notification email');
-    }
+    // Send business notification email
+    await transporter.sendMail({
+      from: env.SMTP_FROM,
+      to: env.BUSINESS_EMAIL,
+      subject: `New Contact Form Submission from ${name}`,
+      html: businessEmailTemplate,
+      replyTo: email,
+    });
 
-    // Send confirmation to customer with retry logic
+    // Send customer confirmation email (non-blocking)
     try {
       await transporter.sendMail({
         from: env.SMTP_FROM,
@@ -189,21 +171,17 @@ export async function submitContactForm(
         subject: "Thank you for contacting The Grand Cobbler",
         html: customerEmailTemplate,
       });
-      console.log('Customer confirmation email sent successfully');
     } catch (error) {
-      console.error('Failed to send customer confirmation:', error);
-      // Don't fail the whole operation if customer email fails
-      console.warn('Business notification sent but customer confirmation failed');
+      // Log but don't fail the submission if customer email fails
+      console.error("Customer confirmation email failed:", error);
     }
 
     return {
       success: true,
     };
   } catch (error: unknown) {
-    console.error("Contact form error:", error);
+    console.error("Contact form submission failed:", error);
 
-    // Always return a generic user-friendly message
-    // Log specific details for debugging but don't expose them to users
     return {
       error: "We're having trouble sending your message right now. Please try again in a few minutes or contact us directly.",
     };
